@@ -16,7 +16,7 @@ public class Hashtag {
     private String description;
 
     @ManyToMany(mappedBy = "posts")
-    private Collection<Post> posts;
+    private Collection<Hashtag> hashtags;
 
     public Hashtag(String name, String description) {
         this.name = name;
@@ -37,8 +37,8 @@ public class Hashtag {
         return description;
     }
 
-    public Collection<Post> getPosts() {
-        return posts;
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
     }
 
     @Override
@@ -46,12 +46,12 @@ public class Hashtag {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Hashtag hashtag = (Hashtag) o;
-        return id == hashtag.id && Objects.equals(name, hashtag.name) && Objects.equals(description, hashtag.description) && Objects.equals(posts, hashtag.posts);
+        return id == hashtag.id && Objects.equals(name, hashtag.name) && Objects.equals(description, hashtag.description) && Objects.equals(hashtags, hashtag.hashtags);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, posts);
+        return Objects.hash(id, name, description, hashtags);
     }
 }
 

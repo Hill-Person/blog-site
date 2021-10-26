@@ -4,7 +4,6 @@ import com.survivingcodingbootcamp.blog.model.Hashtag;
 import com.survivingcodingbootcamp.blog.storage.repository.HashtagRepository;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.Id;
 
 @Service
 public class HashtagStorageJpaImpl implements HashtagStorage {

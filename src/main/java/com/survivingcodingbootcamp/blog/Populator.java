@@ -18,7 +18,7 @@ public class Populator implements CommandLineRunner {
 
 
 
-    public Populator(TopicStorage topicStorage, PostStorage postStorage) {
+    public Populator(TopicStorage topicStorage, PostStorage postStorage, HashtagStorage hashtagStorage) {
 
         this.topicStorage = topicStorage;
         this.postStorage = postStorage;
