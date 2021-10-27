@@ -23,4 +23,5 @@ public class TopicController {
         model.addAttribute("topic", topicStorage.retrieveSingleTopic(id));
         return "single-topic-template";
     }
+
 }

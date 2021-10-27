@@ -1,5 +1,6 @@
 package com.survivingcodingbootcamp.blog.controller;
 
+import com.survivingcodingbootcamp.blog.storage.HashtagStorage;
 import com.survivingcodingbootcamp.blog.storage.PostStorage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/posts")
 public class PostController {
     private PostStorage postStorage;
+    private HashtagStorage hashtagStorage;
 
     public PostController(PostStorage postStorage) {
         this.postStorage = postStorage;

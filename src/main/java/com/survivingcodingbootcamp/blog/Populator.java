@@ -30,6 +30,8 @@ public class Populator implements CommandLineRunner {
 
         Topic topic1 = new Topic("Learning TDD");
         topicStorage.save(topic1);
+        Hashtag fun = new Hashtag("fun", "fun to code");
+        hashtagStorage.save(fun);
 
         Post post1 = new Post("TDD For Fun and Profit", topic1, "Lorem ipsum dolor sit amet, consectetur " +
                 "adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim" +
@@ -50,7 +52,7 @@ public class Populator implements CommandLineRunner {
                 " veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis " +
                 "aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. " +
                 "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id " +
-                "est laborum.");
+                "est laborum.",fun);
         postStorage.save(post3);
         Topic topic2 = new Topic("Battling Imposter Syndrome");
         topicStorage.save(topic2);
@@ -59,8 +61,11 @@ public class Populator implements CommandLineRunner {
         Topic topic4 = new Topic("Object Oriented Programming and You");
         topicStorage.save(topic4);
 
-        Hashtag hashtag1 = new Hashtag("#fun", "fun to code");
-        hashtagStorage.save(hashtag1);
+
+
+//        post3.addHashtag(fun);
+//        postStorage.save(post3);
+
 
     }
 
