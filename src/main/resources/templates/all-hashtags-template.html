@@ -13,7 +13,14 @@
     <link href="/css/layout.css" rel="stylesheet">
 </head>
 <body>
-<h1>Surviving Coding Bootcamp</h1>
+<div class="container">
+    <header class="header">
+        <h1 class="header__title">Surviving Coding Boot Camp</h1>
+        <nav class="header__nav">
+            <div class="header__nav-item"><a class="header__nav-link" href="/">Home</a></div>
+            <div class="header__nav-item"><a class="header__nav-link" href="/hashtags">Hashtags</a></div>
+        </nav>
+        <br>
     <a th:each="hashtag:${hashtags}" th:href="'/hashtags/'+ ${hashtag.id}">
         <li class="hashtags" >
             <h2 th:text="${hashtag.name}"></h2>
