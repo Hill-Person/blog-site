@@ -26,12 +26,26 @@
                                                                        th:text="${post.topic.name}">Topic</a>
             </h3>
             <h2 class="post__title main-content__topic-title" th:text="${post.title}">Post Title</h2>
+            <h2 class="post__author main-content__author-title" th:text="${post.author}">Post Author</h2>
             <p class="post__content" th:text="${post.content}">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Doloremque blanditiis, aut quae fuga id quis ut.
                 Eligendi necessitatibus blanditiis officia, odio deleniti natus molestiae fugiat ex quod vel aliquam
                 illum.
             </p>
         </section>
+
+        <div class="submission-form">
+            <article>Add a Hashtag to the Post</article>
+            <form action="/posts/addhashtag" method="POST">
+                <label for="hashtagName">Hashtag Name</label><br>
+                <input type="text" id="hashtagName" name="name" required><br>
+                <label for="hashtagDescription">Hashtag Description</label><br>
+                <input type="text" id="hashtagDescription" name="description" required><br>
+                <input type="hidden" id="postname" name="postid" th:value="${post.id}">
+                <input type="submit" value="Submit"><br>
+            </form>
+        </div>
+
     </main>
 </div>
 

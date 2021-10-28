@@ -15,16 +15,18 @@ public class Post {
     private Topic topic;
     @Lob
     private String content;
+    private String author;
     @ManyToMany
     private Collection<Hashtag> hashtags;
 
-    protected Post() {
+    public Post() {
     }
 
-    public Post(String title, Topic topic, String content, Hashtag... hashtags) {
+    public Post(String title, Topic topic, String content, String author, Hashtag... hashtags) {
         this.title = title;
         this.topic = topic;
         this.content = content;
+        this.author = author;
         this.hashtags = Arrays.asList(hashtags);
     }
 
@@ -45,6 +47,8 @@ public class Post {
     }
 
     public void addHashtag(Hashtag hashtag) { hashtags.add(hashtag); }
+
+    public String getAuthor() { return author; };
 
 
     @Override
