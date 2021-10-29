@@ -4,6 +4,8 @@ import com.survivingcodingbootcamp.blog.model.Post;
 import com.survivingcodingbootcamp.blog.storage.repository.PostRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class PostStorageJpaImpl implements PostStorage {
     private PostRepository postRepo;
@@ -26,4 +28,8 @@ public class PostStorageJpaImpl implements PostStorage {
     public void save(Post postToAdd) {
         postRepo.save(postToAdd);
     }
+
+    @Override
+    public Optional<Post> retrievePostByTitle(String title) { return postRepo.findByTitle(title); }
+
 }

@@ -50,6 +50,10 @@ public class Post {
 
     public String getAuthor() { return author; };
 
+    public void addPost(Post post) { post.addPost(post);}
+
+//    public void addPost(Post post) { post.addPost(post);}
+
 
     @Override
     public String toString() {

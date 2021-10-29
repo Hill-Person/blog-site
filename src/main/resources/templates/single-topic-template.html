@@ -34,17 +34,22 @@
     </main>
 </div>
 
-<!--<div class="post-submission-form">-->
-<!--    <article>Add a Hashtag to the Post</article>-->
-<!--    <form action="/topic/addpost" method="POST">-->
-<!--        <label for="postName">Post Name</label><br>-->
-<!--        <input type="text" id="hashtagName" name="name" required><br>-->
-<!--        <label for="hashtagDescription">Hashtag Description</label><br>-->
-<!--        <input type="text" id="hashtagDescription" name="description" required><br>-->
-<!--        <input type="hidden" id="postname" name="postid" th:value="${post.id}">-->
-<!--        <input type="submit" value="Submit"><br>-->
-<!--    </form>-->
-<!--</div>-->
+<div class="post-submission-form">
+    <article>Add a Post to the Topic</article><br>
+    <form action="/posts/addpost" method="POST">
+        <label for="postTitle">Post Title</label><br>
+        <input type="text" id="postTitle" name="title" required>
+        <br>
+        <label for="postContent">Post Content</label><br>
+        <textarea id="postContent" name="content" rows="6" cols="50"></textarea>
+        <br>
+<!--        <input type="text" id="postContent" name="content" required>-->
+        <br><label for="postAuthor">Post Author</label><br>
+        <input type="text" id="postAuthor" name="author" required>
+        <input type="hidden"  name="topicId" th:value="${topic.id}"><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
 
 </body>
 
