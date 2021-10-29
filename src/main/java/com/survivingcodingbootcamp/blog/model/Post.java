@@ -55,6 +55,10 @@ public class Post {
 //    public void addPost(Post post) { post.addPost(post);}
 
 
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
+    }
+
     @Override
     public String toString() {
         return "Post{" +

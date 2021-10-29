@@ -32,7 +32,17 @@
                 Eligendi necessitatibus blanditiis officia, odio deleniti natus molestiae fugiat ex quod vel aliquam
                 illum.
             </p>
+
         </section>
+        <br>
+
+        <ul class="posthashtags" th:each="hashtag:${post.hashtags}">
+            <li>Hashtags: <a th:text="${hashtag.name}" th:href="'/hashtags/' + ${hashtag.id}">
+            </a></li>
+        </ul>
+
+        <br>
+        <hr>
 
         <div class="submission-form">
             <article>Add a Hashtag to the Post</article>

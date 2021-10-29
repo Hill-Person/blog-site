@@ -22,7 +22,7 @@
         </nav>
         <br>
     <a th:each="hashtag:${hashtags}" th:href="'/hashtags/'+ ${hashtag.id}">
-        <li class="hashtags" >
+        <li class="hashtags">
             <h2 th:text="${hashtag.name}"></h2>
             <article th:text="${hashtag.description}"></article>
         </li>
